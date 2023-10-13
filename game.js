@@ -63,8 +63,15 @@ else{
     setTimeout(function(){
         $("body").removeClass("game-over");
     },200)
-    $("#level-title").text(`Game over,Press Any Key to Restart`);
-    startOver();
+    $("#level-title").text(` Click on empty space or press Any to key to start the game.`);
+    $(document).on("keydown",function(){
+        startOver();
+        
+    });
+    $(document).on("click",function(){
+        
+        startOver();
+    });
 }
 }
 
